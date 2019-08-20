@@ -1,0 +1,33 @@
+{
+  "name": "babykick-line-bot",
+  "version": "1.0.0",
+  "description": "Line Chatbot for Baby Kick Bot Project 2019",
+  "engines": {
+    "node": ">=8"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "keywords": [
+    "node",
+    "line",
+    "bot",
+    "sdk",
+    "messaging-api"
+  ],
+  "author": "Athibet Prawane",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
