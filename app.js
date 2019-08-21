@@ -27,7 +27,6 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     });
 });
 
-
 // simple reply function
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
@@ -105,10 +104,8 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["waiting"]
       )
-    case '3':
-      return client.replyMessage(
-        replyToken, contents["waiting"]
-      )
+    case 'โภชนาการสำหรับคุณแม่':
+      return replyText(replyToken, contents["menu-manual-3"]["msg"]);
     case '4':
       return client.replyMessage(
         replyToken, contents["waiting"]
@@ -129,10 +126,8 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["waiting"]
       )
-    case '9':
-      return client.replyMessage(
-        replyToken, contents["waiting"]
-      )
+    case 'การเตรียมตัวคลอด':
+      return replyText(replyToken, contents["menu-manual-9"]["msg"]);
     default:
       console.log(`Echo message to ${replyToken}: ${message.text}`);
   }
@@ -140,7 +135,7 @@ function handleText(message, replyToken) {
 
 function handleSticker(message, replyToken) {
   return client.replyMessage(
-    replyToken, contens["default-sticker"]
+    replyToken, contents["default-sticker"]
   );
 }
 
