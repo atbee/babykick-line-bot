@@ -89,6 +89,18 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["waiting"]
       )
+    case '1.1':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '1.2':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '1.3':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
     case '2':
       return client.replyMessage(
         replyToken, contents["waiting"]
