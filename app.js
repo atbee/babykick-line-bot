@@ -9,6 +9,8 @@ const contents = require('./contents.json');
 const client = new line.Client(config);
 const app = express();
 
+app.get('/webhook', (req, res) => res.end(`I'm listening. Please access with POST.`));
+
 // webhook callback
 app.post('/webhook', line.middleware(config), (req, res) => {
   // req.body.events should be an array of events
@@ -25,6 +27,7 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     });
 });
 
+
 // simple reply function
 const replyText = (token, texts) => {
   texts = Array.isArray(texts) ? texts : [texts];
@@ -36,6 +39,10 @@ const replyText = (token, texts) => {
 
 // callback function to handle a single event
 function handleEvent(event) {
+  if (event.replyToken && event.replyToken.match(/^(.)\1*$/)) {
+    return console.log("Hook recieved: " + JSON.stringify(event.message));
+  }
+
   switch (event.type) {
     case 'message':
       const message = event.message;
@@ -47,10 +54,10 @@ function handleEvent(event) {
         default:
           throw new Error(`Unknown message: ${JSON.stringify(message)}`);
       }
-
-    case 'follow':
-      return replyText(event.replyToken, 'Got followed event');
-
+    case 'follow': // greeting event
+      return client.replyMessage(
+        event.replyToken, contents["welcome"]
+      );
     case 'unfollow':
       return console.log(`Unfollowed this bot: ${JSON.stringify(event)}`);
 
@@ -60,22 +67,73 @@ function handleEvent(event) {
 }
 
 function handleText(message, replyToken) {
-
   switch (message.text) {
     case 'นับลูกดิ้น':
-      var a = contents["menu-count"];
-      replyText(replyToken, a);
-    case '1':
-      client.replyMessage(
-        replyToken, contents["reply"]
+      let time = new Date().getHours()
+      // check time must not exceed 9 o'clock
+      if (inRange(time, 5, 9)) {
+        return client.replyMessage(
+          replyToken, contents["menu-count"]
+        );
+      } else {
+        return client.replyMessage(
+          replyToken, contents["menu-count"]
+          // replyToken, contents["menu-count-ctt"]
+        );
+      }
+    case 'คู่มือคุณแม่':
+      return client.replyMessage(
+        replyToken, contents["menu-manual"]
       );
+    case '1':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '2':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '3':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '4':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '5':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '6':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '7':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '8':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
+    case '9':
+      return client.replyMessage(
+        replyToken, contents["waiting"]
+      )
     default:
       console.log(`Echo message to ${replyToken}: ${message.text}`);
   }
 }
 
 function handleSticker(message, replyToken) {
-  return replyText(replyToken, 'Got Sticker');
+  return client.replyMessage(
+    replyToken, contens["default-sticker"]
+  );
+}
+
+function inRange(value, min, max) {
+  return ((value - min) * (value - max) <= 0);
 }
 
 // listen on port
