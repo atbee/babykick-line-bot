@@ -88,21 +88,33 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-1"]
       )
-    case 'พัฒนาการลูกน้อยไตรมาสที่ 1':
+    case 'พัฒนาการลูกน้อยในไตรมาสที่ 1':
       return client.replyMessage(
         replyToken, contents["menu-manual-1-1"]
       )
-    case 'พัฒนาการลูกน้อยไตรมาสที่ 2':
+    case 'พัฒนาการลูกน้อยในไตรมาสที่ 2':
       return client.replyMessage(
         replyToken, contents["menu-manual-1-2"]
       )
-    case 'พัฒนาการลูกน้อยไตรมาสที่ 3':
+    case 'พัฒนาการลูกน้อยในไตรมาสที่ 3':
       return client.replyMessage(
         replyToken, contents["menu-manual-1-3"]
       )
-    case '2':
+    case 'การเปลี่ยนแปลงด้านร่างกาย':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-2"]
+      )
+    case 'การเปลี่ยนแปลงด้านร่างกายในไตรมาสที่ 1':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-2-1"]
+      )
+    case 'การเปลี่ยนแปลงด้านร่างกายในไตรมาสที่ 2':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-2-2"]
+      )
+    case 'การเปลี่ยนแปลงด้านร่างกายในไตรมาสที่ 3':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-2-3"]
       )
     case 'โภชนาการสำหรับคุณแม่':
       return replyText(replyToken, contents["menu-manual-3"]["msg"]);
