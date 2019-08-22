@@ -122,6 +122,20 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-4"]
       )
+    case 'กายบริหารแบบคีเกล':
+      return replyText(replyToken, contents["menu-manual-4-1"]);
+    case 'ท่านั่งจับปลายเท้า':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-4-2"]
+      )
+    case 'ท่านั่งยกมือดันอากาศ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-4-3"]
+      )
+    case 'ท่าโก่งหลัง':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-4-4"]
+      )
     case '5':
       return client.replyMessage(
         replyToken, contents["waiting"]
