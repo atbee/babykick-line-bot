@@ -118,9 +118,9 @@ function handleText(message, replyToken) {
       )
     case 'โภชนาการสำหรับคุณแม่':
       return replyText(replyToken, contents["menu-manual-3"]["msg"]);
-    case '4':
+    case 'การออกกำลังกายสำหรับคุณแม่':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-4"]
       )
     case '5':
       return client.replyMessage(
