@@ -84,21 +84,21 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual"]
       );
-    case '1':
+    case 'พัฒนาการลูกน้อย':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-1"]
       )
-    case '1.1':
+    case 'พัฒนาการลูกน้อยไตรมาสที่ 1':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-1-1"]
       )
-    case '1.2':
+    case 'พัฒนาการลูกน้อยไตรมาสที่ 2':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-1-2"]
       )
-    case '1.3':
+    case 'พัฒนาการลูกน้อยไตรมาสที่ 3':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-1-3"]
       )
     case '2':
       return client.replyMessage(
