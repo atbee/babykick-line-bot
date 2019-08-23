@@ -144,9 +144,9 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-6"]
       )
-    case '7':
+    case 'อาการไม่สุขสบาย':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-7"]
       )
     case '8':
       return client.replyMessage(
