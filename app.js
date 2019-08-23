@@ -84,7 +84,7 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual"]
       );
-    case 'พัฒนาการลูกน้อย':
+    case 'พัฒนาการลูกน้อย': // manual 1
       return client.replyMessage(
         replyToken, contents["menu-manual-1"]
       )
@@ -100,7 +100,7 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-1-3"]
       )
-    case 'การเปลี่ยนแปลงด้านร่างกาย':
+    case 'การเปลี่ยนแปลงด้านร่างกาย': // manual 2
       return client.replyMessage(
         replyToken, contents["menu-manual-2"]
       )
@@ -116,9 +116,9 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-2-3"]
       )
-    case 'โภชนาการสำหรับคุณแม่':
+    case 'โภชนาการสำหรับคุณแม่': // manual 3
       return replyText(replyToken, contents["menu-manual-3"]["msg"]);
-    case 'การออกกำลังกายสำหรับคุณแม่':
+    case 'การออกกำลังกายสำหรับคุณแม่': // manual 4
       return client.replyMessage(
         replyToken, contents["menu-manual-4"]
       )
@@ -136,7 +136,7 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-4-4"]
       )
-    case 'การนอนหลับพักผ่อนในหญิงตั้งครรภ์':
+    case 'การนอนหลับพักผ่อนในหญิงตั้งครรภ์': // manual 5
       return client.replyMessage(
         replyToken, contents["menu-manual-5"]
       )
@@ -144,15 +144,47 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-6"]
       )
-    case 'อาการไม่สุขสบาย':
+    case 'อาการไม่สุขสบาย': // manual 7
       return client.replyMessage(
         replyToken, contents["menu-manual-7"]
       )
-    case '8':
+    case 'ระบบทางเดินอาหาร':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1"]
+      )
+    case 'ระบบหัวใจและหลอดเลือด':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-2"]
+      )
+    case 'ระบบหายใจ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-3"]
+      )
+    case 'ระบบกระดูกและกล้ามเนื้อ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-4"]
+      )
+    case 'ระบบขับถ่ายปัสสาวะ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-5"]
+      )
+    case 'ระบบผิวหนัง':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-6"]
+      )
+    case 'ระบบประสาท':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-7"]
+      )
+    case 'อาการอื่นๆ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-8"]
+      )
+    case '8': // manual 8
       return client.replyMessage(
         replyToken, contents["waiting"]
       )
-    case 'การเตรียมตัวคลอด':
+    case 'การเตรียมตัวคลอด': // manual 9
       return replyText(replyToken, contents["menu-manual-9"]["msg"]);
     default:
       console.log(`Echo message to ${replyToken}: ${message.text}`);
