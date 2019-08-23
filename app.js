@@ -136,13 +136,13 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-4-4"]
       )
-    case '5':
+    case 'การนอนหลับพักผ่อนในหญิงตั้งครรภ์':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-5"]
       )
-    case '6':
+    case 'การมีเพศสัมพันธ์ในระยะตั้งครรภ์':
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-6"]
       )
     case '7':
       return client.replyMessage(
