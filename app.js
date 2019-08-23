@@ -180,10 +180,16 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-8"]
       )
-    case '8': // manual 8
+    case 'สัญญาณอันตรายที่อาจเกิดขึ้นได้ในระยะตั้งครรภ์': // manual 8
       return client.replyMessage(
-        replyToken, contents["waiting"]
+        replyToken, contents["menu-manual-8"]
       )
+    case 'สัญญาณอันตรายในไตรมาสที่ 1':
+      return replyText(replyToken, contents["menu-manual-8-1"]);
+    case 'สัญญาณอันตรายในไตรมาสที่ 2':
+      return replyText(replyToken, contents["menu-manual-8-2"]);
+    case 'สัญญาณอันตรายในไตรมาสที่ 3':
+      return replyText(replyToken, contents["menu-manual-8-3"]);
     case 'การเตรียมตัวคลอด': // manual 9
       return replyText(replyToken, contents["menu-manual-9"]["msg"]);
     default:
