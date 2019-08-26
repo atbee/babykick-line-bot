@@ -185,11 +185,17 @@ function handleText(message, replyToken) {
         replyToken, contents["menu-manual-8"]
       )
     case 'สัญญาณอันตรายในไตรมาสที่ 1':
-      return replyText(replyToken, contents["menu-manual-8-1"]);
+      return client.replyMessage(
+        replyToken, contents["menu-manual-8-1"]
+      )
     case 'สัญญาณอันตรายในไตรมาสที่ 2':
-      return replyText(replyToken, contents["menu-manual-8-2"]);
+      return client.replyMessage(
+        replyToken, contents["menu-manual-8-2"]
+      )
     case 'สัญญาณอันตรายในไตรมาสที่ 3':
-      return replyText(replyToken, contents["menu-manual-8-3"]);
+      return client.replyMessage(
+        replyToken, contents["menu-manual-8-3"]
+      )
     case 'การเตรียมตัวคลอด': // manual 9
       return replyText(replyToken, contents["menu-manual-9"]["msg"]);
     default:
