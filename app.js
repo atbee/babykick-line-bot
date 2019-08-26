@@ -67,6 +67,10 @@ function handleEvent(event) {
 
 function handleText(message, replyToken) {
   switch (message.text) {
+    case 'เมนู':
+      return client.replyMessage(
+        replyToken, contents["menu"]
+      );
     case 'นับลูกดิ้น':
       let time = new Date().getHours()
       // check time must not exceed 9 o'clock
