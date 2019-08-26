@@ -124,19 +124,17 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-4"]
       )
-    case 'กายบริหารแบบคีเกล':
-      return replyText(replyToken, contents["menu-manual-4-1"]);
     case 'ท่านั่งจับปลายเท้า':
       return client.replyMessage(
-        replyToken, contents["menu-manual-4-2"]
+        replyToken, contents["menu-manual-4-1"]
       )
     case 'ท่านั่งยกมือดันอากาศ':
       return client.replyMessage(
-        replyToken, contents["menu-manual-4-3"]
+        replyToken, contents["menu-manual-4-2"]
       )
     case 'ท่าโก่งหลัง':
       return client.replyMessage(
-        replyToken, contents["menu-manual-4-4"]
+        replyToken, contents["menu-manual-4-3"]
       )
     case 'การนอนหลับพักผ่อนในหญิงตั้งครรภ์': // manual 5
       return client.replyMessage(
