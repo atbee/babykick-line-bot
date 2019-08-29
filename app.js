@@ -248,6 +248,18 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-8"]
       )
+    case 'เท้าและข้อบวม':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-8-1"]
+      )
+    case 'นอนไม่หลับ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-8-2"]
+      )
+    case 'อ่อนเพลีย':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-8-3"]
+      )
     case 'สัญญาณอันตรายที่อาจเกิดขึ้นได้ในระยะตั้งครรภ์': // manual 8
       return client.replyMessage(
         replyToken, contents["menu-manual-8"]
