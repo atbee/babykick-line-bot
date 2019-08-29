@@ -224,6 +224,10 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-6"]
       )
+    case 'ผิวหนังเปลี่ยนแปลง':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-6-1"]
+      )
     case 'ระบบประสาท': // manual 7-7
       return client.replyMessage(
         replyToken, contents["menu-manual-7-7"]
