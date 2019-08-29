@@ -152,35 +152,59 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7"]
       )
-    case 'ระบบทางเดินอาหาร':
+    case 'ระบบทางเดินอาหาร': // manual 7-1
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1"]
       )
-    case 'ระบบหัวใจและหลอดเลือด':
+    case 'คลื่นไส้ อาเจียน': // 7-1-1
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1-1"]
+      )
+    case 'มีน้ำลายมาก': // 7-1-2
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1-2"]
+      )
+    case 'เหงือกอักเสบ': // 7-1-3
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1-3"]
+      )
+    case 'ร้อนในอก': // 7-1-4
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1-4"]
+      )
+    case 'ท้องผูก': // 7-1-5
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1-5"]
+      )
+    case 'ริดสีดวงทวาร': // 7-1-6
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-1-6"]
+      )
+    case 'ระบบหัวใจและหลอดเลือด': // manual 7-2
       return client.replyMessage(
         replyToken, contents["menu-manual-7-2"]
       )
-    case 'ระบบหายใจ':
+    case 'ระบบหายใจ': // manual 7-3
       return client.replyMessage(
         replyToken, contents["menu-manual-7-3"]
       )
-    case 'ระบบกระดูกและกล้ามเนื้อ':
+    case 'ระบบกระดูกและกล้ามเนื้อ': // manual 7-4
       return client.replyMessage(
         replyToken, contents["menu-manual-7-4"]
       )
-    case 'ระบบขับถ่ายปัสสาวะ':
+    case 'ระบบขับถ่ายปัสสาวะ': // manual 7-5
       return client.replyMessage(
         replyToken, contents["menu-manual-7-5"]
       )
-    case 'ระบบผิวหนัง':
+    case 'ระบบผิวหนัง': // manual 7-6
       return client.replyMessage(
         replyToken, contents["menu-manual-7-6"]
       )
-    case 'ระบบประสาท':
+    case 'ระบบประสาท': // manual 7-7
       return client.replyMessage(
         replyToken, contents["menu-manual-7-7"]
       )
-    case 'อาการอื่นๆ':
+    case 'อาการอื่นๆ': // manual 7-8
       return client.replyMessage(
         replyToken, contents["menu-manual-7-8"]
       )
