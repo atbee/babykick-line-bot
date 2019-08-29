@@ -204,9 +204,21 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-4"]
       )
+    case 'ตะคริว':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-4-1"]
+      )
+    case 'ปวดหลัง':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-4-2"]
+      )
     case 'ระบบขับถ่ายปัสสาวะ': // manual 7-5
       return client.replyMessage(
         replyToken, contents["menu-manual-7-5"]
+      )
+    case 'ปัสสาวะบ่อย':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-5-1"]
       )
     case 'ระบบผิวหนัง': // manual 7-6
       return client.replyMessage(
