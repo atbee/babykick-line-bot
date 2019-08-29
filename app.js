@@ -156,33 +156,41 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1"]
       )
-    case 'คลื่นไส้ อาเจียน': // 7-1-1
+    case 'คลื่นไส้ อาเจียน':
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1-1"]
       )
-    case 'มีน้ำลายมาก': // 7-1-2
+    case 'มีน้ำลายมาก':
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1-2"]
       )
-    case 'เหงือกอักเสบ': // 7-1-3
+    case 'เหงือกอักเสบ':
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1-3"]
       )
-    case 'ร้อนในอก': // 7-1-4
+    case 'ร้อนในอก':
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1-4"]
       )
-    case 'ท้องผูก': // 7-1-5
+    case 'ท้องผูก':
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1-5"]
       )
-    case 'ริดสีดวงทวาร': // 7-1-6
+    case 'ริดสีดวงทวาร':
       return client.replyMessage(
         replyToken, contents["menu-manual-7-1-6"]
       )
     case 'ระบบหัวใจและหลอดเลือด': // manual 7-2
       return client.replyMessage(
         replyToken, contents["menu-manual-7-2"]
+      )
+    case 'ใจสั่น เป็นลม':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-2-1"]
+      )
+    case 'เส้นเลือดขอด':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-2-2"]
       )
     case 'ระบบหายใจ': // manual 7-3
       return client.replyMessage(
