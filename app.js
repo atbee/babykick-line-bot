@@ -232,6 +232,18 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-7"]
       )
+    case 'ปวดศีรษะ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-7-1"]
+      )
+    case 'อารมณ์แปรปรวน':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-7-2"]
+      )
+    case 'ปวด ชาฝ่ามือและนิ้วมือ':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-7-3"]
+      )
     case 'อาการอื่นๆ': // manual 7-8
       return client.replyMessage(
         replyToken, contents["menu-manual-7-8"]
