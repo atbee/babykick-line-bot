@@ -196,6 +196,10 @@ function handleText(message, replyToken) {
       return client.replyMessage(
         replyToken, contents["menu-manual-7-3"]
       )
+    case 'หายใจลำบาก':
+      return client.replyMessage(
+        replyToken, contents["menu-manual-7-3-1"]
+      )
     case 'ระบบกระดูกและกล้ามเนื้อ': // manual 7-4
       return client.replyMessage(
         replyToken, contents["menu-manual-7-4"]
