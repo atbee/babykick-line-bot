@@ -76,9 +76,9 @@
                 {
                     "imageUrl": "https://atb-files.s3-ap-southeast-1.amazonaws.com/count2ten.jpg",
                     "action": {
-                        "type": "message",
+                        "type": "uri",
                         "label": "Count to Ten",
-                        "text": "นับลูกดิ้นแบบ Count to Ten"
+                        "uri": "line://app/1606482498-VJdOoZXR"
                     }
                 },
                 {
