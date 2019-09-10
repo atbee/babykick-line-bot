@@ -109,6 +109,36 @@
             ]
         }
     },
+    "menu-count-sadovsky": [
+        {
+            "type": "text",
+            "text": "นับ Sadovsky ได้ 👶🏻"
+        },
+        {
+            "type": "flex",
+            "altText": "Sadovsky",
+            "contents": {
+                "type": "bubble",
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "button",
+                            "style": "primary",
+                            "height": "sm",
+                            "action": {
+                                "type": "uri",
+                                "label": "🕹นับสาดอบ",
+                                "uri": "line://app/1606482498-lJ8JkE6d"
+                            },
+                            "color": "#dd8cc9"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
     "menu-manual": [
         {
             "type": "text",

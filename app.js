@@ -72,19 +72,33 @@ function handleText(message, replyToken) {
         replyToken, contents["menu"]
       );
     case 'นับลูกดิ้น':
-      let time = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
-      time = new Date(time).getHours();
-      // check time must not exceed 9 o'clock
-      if (inRange(time, 5, 9)) {
-        return client.replyMessage(
-          replyToken, contents["menu-count"]
-        );
-      } else {
-        return client.replyMessage(
-          replyToken, contents["menu-count"]
-          // replyToken, contents["menu-count-ctt"]
-        );
-      }
+      return client.replyMessage(
+        replyToken, contents["menu-count"]
+      );
+    // let t = getHours()
+    // // check time must not exceed 4-8 o'clock
+    // if (inRange(t, 4, 8)) {
+    //   return client.replyMessage(
+    //     replyToken, contents["menu-count"]
+    //   );
+    // } else {
+    //   return client.replyMessage(
+    //     replyToken, contents["menu-count-ctt"]
+    //   );
+    // }
+    case 'นับลูกดิ้นแบบ Sadovsky':
+      return client.replyMessage(
+        replyToken, contents["menu-count-sadovsky"]
+      );
+    // let h = getHours()
+    // // check time must not exceed 4-8 o'clock
+    // if (inRange(h, 4, 21)) {
+    //   return client.replyMessage(
+    //     replyToken, contents["menu-count-sadovsky"]
+    //   );
+    // } else {
+    //   return replyText(replyToken, "ไม่ได้อยู่ในช่วงอะ")
+    // }
     case 'คู่มือคุณแม่':
       return client.replyMessage(
         replyToken, contents["menu-manual"]
@@ -279,12 +293,10 @@ function handleText(message, replyToken) {
       )
     case 'การเตรียมตัวคลอด': // manual 9
       return replyText(replyToken, contents["menu-manual-9"]["msg"]);
-    case 'time':
-      var t = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
-      t = new Date(t);
-      console.log("<<", t)
-      let s = ">>" + t
-      return replyText(replyToken, s);
+    case 't':
+      let x = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
+      x = new Date(x).toString();
+      return replyText(replyToken, x);
     default:
       console.log(`Echo message to ${replyToken}: ${message.text}`);
   }
@@ -294,6 +306,13 @@ function handleSticker(message, replyToken) {
   return client.replyMessage(
     replyToken, contents["default-sticker"]
   );
+}
+
+function getHours() {
+  let time = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
+  time = new Date(time).getHours();
+
+  return time
 }
 
 function inRange(value, min, max) {
