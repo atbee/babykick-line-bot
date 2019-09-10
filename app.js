@@ -72,7 +72,8 @@ function handleText(message, replyToken) {
         replyToken, contents["menu"]
       );
     case 'นับลูกดิ้น':
-      let time = new Date().getHours()
+      let time = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
+      time = new Date(time).getHours();
       // check time must not exceed 9 o'clock
       if (inRange(time, 5, 9)) {
         return client.replyMessage(
@@ -278,6 +279,12 @@ function handleText(message, replyToken) {
       )
     case 'การเตรียมตัวคลอด': // manual 9
       return replyText(replyToken, contents["menu-manual-9"]["msg"]);
+    case 'time':
+      var t = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
+      t = new Date(t);
+      console.log("<<", t)
+      let s = ">>" + t
+      return replyText(replyToken, s);
     default:
       console.log(`Echo message to ${replyToken}: ${message.text}`);
   }
