@@ -86,9 +86,13 @@ function handleText(message, replyToken) {
     //     replyToken, contents["menu-count-ctt"]
     //   );
     // }
-    case 'นับลูกดิ้นแบบ Sadovsky':
+    case 'นับลูกดิ้นแบบ count to ten':
       return client.replyMessage(
-        replyToken, contents["menu-count-sadovsky"]
+        replyToken, contents["menu-count-ctt-start"]
+      );
+    case 'นับลูกดิ้นแบบ sadovsky':
+      return client.replyMessage(
+        replyToken, contents["menu-count-sadovsky-start"]
       );
     // let h = getHours()
     // // check time must not exceed 4-8 o'clock
