@@ -91,18 +91,18 @@ function handleText(message, replyToken) {
         replyToken, contents["menu-count-ctt-start"]
       );
     case 'นับลูกดิ้นแบบ sadovsky':
-      return client.replyMessage(
-        replyToken, contents["menu-count-sadovsky-start"]
-      );
-    // let h = getHours()
-    // // check time must not exceed 4-8 o'clock
-    // if (inRange(h, 4, 21)) {
-    //   return client.replyMessage(
-    //     replyToken, contents["menu-count-sadovsky"]
-    //   );
-    // } else {
-    //   return replyText(replyToken, "ไม่ได้อยู่ในช่วงอะ")
-    // }
+      // return client.replyMessage(
+      //   replyToken, contents["menu-count-sadovsky-start"]
+      // );
+      let h = getHours()
+      // check time must not exceed 4-8 o'clock
+      if (inRange(h, 4, 21)) {
+        return client.replyMessage(
+          replyToken, contents["menu-count-sadovsky-start"]
+        );
+      } else {
+        return replyText(replyToken, "ไม่ได้อยู่ในช่วงอะ")
+      }
     case 'คู่มือคุณแม่':
       return client.replyMessage(
         replyToken, contents["menu-manual"]
