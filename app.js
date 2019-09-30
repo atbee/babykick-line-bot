@@ -96,7 +96,7 @@ function handleText(message, replyToken) {
       // );
       let h = getHours()
       // check time must not exceed 4-8 o'clock
-      if (inRange(h, 4, 21)) {
+      if (inRange(h, 4, 9)) {
         return client.replyMessage(
           replyToken, contents["menu-count-sadovsky-start"]
         );
