@@ -701,8 +701,9 @@
     ],
     "menu-manual-4-3": [
         {
-            "type": "text",
-            "text": "วิดีโอประกอบ ❌"
+            "type": "video",
+            "originalContentUrl": "https://youtu.be/3GzY_Fkf4Oo",
+            "previewImageUrl": "https://atb-files.s3-ap-southeast-1.amazonaws.com/preview4-2.jpg"
         },
         {
             "type": "text",
