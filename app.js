@@ -72,37 +72,37 @@ function handleText(message, replyToken) {
         replyToken, contents["menu"]
       );
     case 'นับลูกดิ้น':
-      // return client.replyMessage(
-      //   replyToken, contents["menu-count"]
-      // );
-      let t = getHours()
-      // check time must not exceed 4-8 o'clock
-      if (inRange(t, 4, 8)) {
-        return client.replyMessage(
-          replyToken, contents["menu-count"]
-        );
-      } else {
-        return client.replyMessage(
-          replyToken, contents["menu-count-ctt"]
-        );
-      }
+      return client.replyMessage(
+        replyToken, contents["menu-count"]
+      );
+    // let t = getHours()
+    // // check time must not exceed 4-8 o'clock
+    // if (inRange(t, 4, 8)) {
+    //   return client.replyMessage(
+    //     replyToken, contents["menu-count"]
+    //   );
+    // } else {
+    //   return client.replyMessage(
+    //     replyToken, contents["menu-count-ctt"]
+    //   );
+    // }
     case 'นับลูกดิ้นแบบ count to ten':
       return client.replyMessage(
         replyToken, contents["menu-count-ctt-start"]
       );
     case 'นับลูกดิ้นแบบ sadovsky':
-      return client.replyMessage(
-        replyToken, contents["menu-count-sadovsky-start"]
-      );
-    // let h = getHours()
-    // // check time must not exceed 4-8 o'clock
-    // if (inRange(h, 4, 9)) {
-    //   return client.replyMessage(
-    //     replyToken, contents["menu-count-sadovsky-start"]
-    //   );
-    // } else {
-    //   return replyText(replyToken, "ไม่ได้อยู่ในช่วงอะ")
-    // }
+      // return client.replyMessage(
+      //   replyToken, contents["menu-count-sadovsky-start"]
+      // );
+      let h = getHours()
+      // check time must not exceed 4-8 o'clock
+      if (inRange(h, 4, 10) || inRange(h, 11, 14) || inRange(h, 17, 21)) {
+        return client.replyMessage(
+          replyToken, contents["menu-count-sadovsky-start"]
+        );
+      } else {
+        return replyText(replyToken, "ตอนนี้ไม่ได้อยู่ในช่วงในการนับแบบ sadovsky ค่ะ😅")
+      }
     case 'คู่มือคุณแม่':
       return client.replyMessage(
         replyToken, contents["menu-manual"]
