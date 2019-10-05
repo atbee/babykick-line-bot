@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  bbk-line:
+    container_name: test-line
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bbk-line:$VER
+    ports:
+      - '4444:4444'
+    environment:
+      - TZ=Asia/Bangkok
