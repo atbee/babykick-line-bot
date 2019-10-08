@@ -178,7 +178,7 @@
                                 "label": "🕹นับลูกดิ้น",
                                 "uri": "line://app/1606482498-lJ8JkE6d"
                             },
-                            "color": "#DDBB8C"
+                            "color": "#F78FDE"
                         }
                     ]
                 }
@@ -1612,5 +1612,29 @@
     "waiting": {
         "type": "text",
         "text": "กำลังอยู่ในขั้นตอนพัฒนาค่ะ  ❤️"
+    },
+    "1669": {
+        "type": "flex",
+        "altText": "สายด่วน 1669",
+        "contents": {
+            "type": "bubble",
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "height": "sm",
+                        "action": {
+                            "type": "uri",
+                            "label": "🚑สายด่วน 1669",
+                            "uri": "tel:1669"
+                        },
+                        "color": "#FF3535"
+                    }
+                ]
+            }
+        }
     }
 }

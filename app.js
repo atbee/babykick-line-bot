@@ -96,12 +96,12 @@ function handleText(message, replyToken) {
       // );
       let h = getHours()
       // check time must not exceed 4-8 o'clock
-      if (inRange(h, 4, 8) || inRange(h, 11, 14) || inRange(h, 17, 21)) {
+      if (inRange(h, 4, 10)) {
         return client.replyMessage(
           replyToken, contents["menu-count-sadovsky-start"]
         );
       } else {
-        return replyText(replyToken, "ตอนนี้ไม่ได้อยู่ในช่วงในการนับแบบ sadovsky ค่ะ😅")
+        return replyText(replyToken, ["ในเวลานี้ไม่สามารถทำรายการเริ่มนับแบบ sadovsky ได้ค่ะ😅 คุณแม่จะต้องขอทำรายการก่อน 10.00 น.", "หากคุณแม่ทำรายการเริ่มนับแล้ว ⏳กรุณารอการแจ้งเตือนแต่ละมื้อนะคะ\n🌞มื้อเที่ยง 11.30 น.\n🌙มื้อเย็น 17.00 น.", "กรณีทำรายการขอนับในช่วงเช้าไม่ทันหรือมีข้อผิดพลาดเกิดขึ้นระหว่างการนับ 💡เราขอแนะนำให้คุณแม่นับลูกดิ้นแบบ count to ten แทนค่ะ👍🏻"])
       }
     case 'คู่มือคุณแม่':
       return client.replyMessage(
@@ -297,10 +297,14 @@ function handleText(message, replyToken) {
       )
     case 'การเตรียมตัวคลอด': // manual 9
       return replyText(replyToken, contents["menu-manual-9"]["msg"]);
-    case 't':
+    case 'time':
       let x = new Date().toLocaleString("en-US", { timeZone: "Asia/Bangkok" });
       x = new Date(x).toString();
       return replyText(replyToken, x);
+    case '1669':
+      return client.replyMessage(
+        replyToken, contents["1669"]
+      )
     default:
       console.log(`Echo message to ${replyToken}: ${message.text}`);
   }
